@@ -3,6 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+You can try the app without download: https://youtube-raffle-app.herokuapp.com
 
 In the project directory, you can run:
 
