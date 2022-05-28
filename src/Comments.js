@@ -93,7 +93,7 @@ function Comments({winnerCount,backupCount,name,url,loading,setLoading}) {
     <div className='p2'>- Aynı yorumu birden fazla kez yapan kullanıcıların yalnızca tek yorumları geçerli olur</div>
     <button className="startButton" onClick={startHandle} >BAŞLAT</button>
     {loading && <h2 className='loading'>Sonuçlar Yükleniyor..</h2>}
-    <h2>Asil Kazanan</h2>
+    {winners.length >= 1 && <h2>Asil Kazanan</h2>}
     { winners.map((e) => {
       return <ul>
         <li>
@@ -106,7 +106,7 @@ function Comments({winnerCount,backupCount,name,url,loading,setLoading}) {
         </ul>
       })
     }
-    <h2>Yedek Kazanan</h2>
+    {backups.length >= 1 && <h2>Yedek Kazanan</h2>}
     { backups.map((e) => {
       return <ul>
         <li>

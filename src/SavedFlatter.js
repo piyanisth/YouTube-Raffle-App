@@ -5,10 +5,10 @@ function SavedFlatter({name,winners,backups}) {
 
   return (
     <div>
-      <h2>Son Çekilişin Adı: {name}</h2>
+      {name.length >= 1 && <h2>Son Çekilişin Adı: {name}</h2>}
       <div className='save'>
         <div> 
-        <h4>Son Asil Kazanan</h4>
+        {winners.length >= 1 && <h4>Son Asil Kazanan</h4>}
           { winners.map( e => {
           return <ul>
               <li>
@@ -23,7 +23,7 @@ function SavedFlatter({name,winners,backups}) {
         }
         </div>
         <div> 
-        <h4>Son Yedek Kazanan</h4>
+        {backups.length >= 1 && <h4>Son Yedek Kazanan</h4>}
         { backups.map( e => {
           return <ul>
               <li>

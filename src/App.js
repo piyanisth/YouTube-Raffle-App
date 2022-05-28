@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
 import Count from './Count';
-
 function App() { 
 
   const [url, setUrl] = useState('');   
