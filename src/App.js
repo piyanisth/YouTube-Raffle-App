@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
-import './App.css';
 import Count from './Count';
+import './App.css';
 function App() { 
 
   const [url, setUrl] = useState('');   
   const [name, setName] = useState('');
-  const [loading, setLoading] = useState(false);
 
   const handleUrlChange = (e) => {
     setUrl(e.target.value)
@@ -15,11 +14,12 @@ function App() {
   }
  
   return (
-    <div>
+    <div className='allContainer'>
       <h1 className="font-link">Youtube Yorum Çekilişi</h1>   
-      <input className="input" type="text" placeholder="Çekiliş Adı Yazın" value={name} onChange={handleNameChange}/>   
-      <input className="input" type="text" value={url} onChange={handleUrlChange} placeholder='Linki Buraya Yapıştırınız' />
-      <Count  name={name} url={url} loading={loading} setLoading={setLoading}></Count>
+      <input className="inputt" type="text" placeholder="Çekiliş Adı Yazınız" value={name} onChange={handleNameChange}/>   
+      <input className="inputt" type="text" value={url} onChange={handleUrlChange} placeholder='YouTube Linkini Yapıştırınız' />
+      <Count  name={name} url={url}></Count>
     </div>
   );
-}export default App;
+}
+export default App;

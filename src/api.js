@@ -5,7 +5,7 @@ export async function getComments(url,setLoading) {
   try {
     setLoading(true)
     const mainUrl = "https://www.googleapis.com/youtube/v3"
-    const apiKey = "AIzaSyBCpRag47Xog-qy2Z8HBICo9Sqoa6dQpuE" 
+    const apiKey = "AIzaSyB6uZXftTfClx0KNun-fDQbn0TjxV9ZQ68" 
     const parsed = queryString.parse(url.split('?')[1])  
     // const videoId= url.match('v=([a-zA-Z0-9_-]+)&?')[1]
     const videoId = parsed.v

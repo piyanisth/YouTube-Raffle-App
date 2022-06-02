@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import Comments from './Comments'
-function Count({name,url,loading,setLoading}) {
+import Home from './Home'
+function Count({name,url}) {
 
   const [winnerCount, setWinnerCount] = useState(1)
   const [backupCount, setBackupCount] = useState(1)
@@ -35,18 +35,18 @@ function Count({name,url,loading,setLoading}) {
     <div className='buttons'>
       <div className='btnWinner'>
         <h4>Asil Sayısı</h4>
-          <button className="minus"  onClick={decrementWinner}>–</button>
-          <input type="number" id="input" value={winnerCount}></input>
+        <button className="minus"  onClick={decrementWinner}>–</button>
+          <input type="number" id="inputt" value={winnerCount}></input>
           <button className="plus" onClick={incrementWinner}>+</button>
       </div>
       <div className='btnBackup'>
         <h4>Yedek Sayısı</h4>
           <button className="minus" onClick={decrementBackup}>–</button>
-          <input type="number" id="input" value={backupCount}></input>
+          <input type="number" id="inputt" value={backupCount}></input>
           <button className="plus" onClick={incrementBackup}>+</button>
       </div>
     </div>
-    <Comments winnerCount={winnerCount} backupCount={backupCount} name={name} url={url} loading={loading} setLoading={setLoading}></Comments>
+    <Home winnerCount={winnerCount} backupCount={backupCount} name={name} url={url}></Home>
     </>
   )
 }
